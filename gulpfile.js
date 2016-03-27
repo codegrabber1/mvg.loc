@@ -34,7 +34,7 @@ gulp.task('sass', function () {
             browsers: ['last 2 versions'],
             cascade: false
         }))
-        .pipe(gulp.dest('app/styles/'))
+        .pipe(gulp.dest('app/'))
         .pipe(connect.reload());
 });
 
