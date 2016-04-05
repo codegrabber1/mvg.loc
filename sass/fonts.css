@@ -1,0 +1,31 @@
+.brdred {
+  border: 1px solid red; }
+
+.brdblue {
+  border: 1px solid blue; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto; }
+
+*:focus {
+  outline: none; }
+
+input {
+  border: none;
+  margin: 0;
+  padding: 10px;
+  background-color: #fff; }
+
+section,
+footer {
+  margin: 0;
+  padding: 0; }
+
+/*# sourceMappingURL=fonts.css.map */

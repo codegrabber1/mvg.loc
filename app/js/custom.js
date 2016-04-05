@@ -1,9 +1,30 @@
 jQuery(document).ready(function($) {
-
 // top menu
-$(".toggle-mnu").click(function() {
-  $(this).toggleClass("on");
-  $(".main-mnu").slideToggle();
-  return false;
-});
+
+  $(".sf-menu").superfish();
+  $(".sf-menu").after("<div id='my-menu'>");
+  $(".sf-menu").clone().appendTo("#my-menu");
+  $("#my-menu").find("*").attr('style', '');
+  $("#my-menu").find("ul").removeClass("sf-menu");
+  $("#my-menu").mmenu({
+    extensions : [ 'widescreen', 'theme-dark', 'pageshadow', 'effect-menu-slide', 'effect-listitems-slide' ],
+    navbar: {
+      title: "Мобільна Волонтерська Група"
+    }
+  });
+
+  var api = $("#my-menu").data("mmenu");
+  api.bind("closed", function(){
+    $(".toggle-mnu").removeClass("on");
+  });
+
+  $(".mobile-mnu").click(function(){
+   var mmAPI = $("#my-menu").data("mmenu");
+   mmAPI.open();
+   var thiss = $(this).find(".toggle-mnu");
+   thiss.toggleClass("on");
+   $(".main-mnu").slideToggle();
+        return false;
+   });
+
 });// ready

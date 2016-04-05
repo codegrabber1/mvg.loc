@@ -5,6 +5,7 @@ var gulp = require('gulp');
     wiredep = require('wiredep').stream;
     sass = require('gulp-sass');
     concatCss = require('gulp-concat-css');
+    concat = require('gulp-concat');
     autoprefixer = require('gulp-autoprefixer');
     livereload = require('gulp-livereload');
     connect = require('gulp-connect');
@@ -38,6 +39,16 @@ gulp.task('sass', function () {
         .pipe(connect.reload());
 });
 
+// script concat
+gulp.task('script', function(){
+  return gulp.src([
+    'app/libs/animate/animate-css.js',
+    'app/libs/jq.mmnu/js/jquery.mmenu.all.min.js',
+    'app/libs/superfish/dist/js/superfish.js'
+  ])
+  .pipe(concat('all.js'))
+  .pipe(gulp.dest('app/js/'));
+});
 // html
 gulp.task('html', function(){
     gulp.src('app/*.html')
@@ -48,8 +59,9 @@ gulp.task('html', function(){
 gulp.task('watch', function() {
     gulp.watch('sass/*.sass', ['sass']);
     gulp.watch('app/*.html', ['html']);
+    gulp.watch('app/*js', ['script']);
     gulp.watch('bower.json', ['bower']);
 });
 
 // default
-gulp.task('default', ['bower', 'connect', 'html', 'sass', 'watch']);
+gulp.task('default', ['bower', 'connect', 'script', 'html', 'sass', 'watch']);
