@@ -14,6 +14,8 @@ nav
   border-top: 1px solid $blue_col
   border-bottom: 1px solid $yell_col
   box-shadow: 2px 2px 6px rgba(0,0,0,.2)
+  .sf-arrows .sf-with-ul::after
+    border: none
   .sf-menu
     display: inline-block
     margin: 0
@@ -30,9 +32,11 @@ nav
     a
       text-decoration: none
       color: $font_menu
-      &:hover
+      &:hover,
+      &.active
         text-decoration: none
-        color: $active_link
+        color: $blue_col
+        background-color: $yell_col
 .toggle-mnu
   display: block
   width: 28px
@@ -70,7 +74,7 @@ nav
 .nav-item
   display: block
 .top_block
-  margin: 0 10px
+  margin: 10px
   padding: 0 10px
   .t_block_title
     border-bottom: 1px solid $blue_col

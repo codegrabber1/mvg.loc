@@ -6,10 +6,52 @@ body
   max-width: 100%
   min-width: 320px
   line-height: 1.42857
+  color: $font_col
   -webkit-font-smoothing: antialiased
 main
-  margin: 0
+  margin: 0 0 10px 0
   padding: 15px 0
+  .art_header,
+  .w_title
+    text-transform: uppercase
+    position: relative
+    padding: 5px 15px
+    border-bottom: 1px solid $yell_col
+    &::before
+      content: ""
+      width: 5px
+      height: 20px
+      background-color: $blue_col
+      position: absolute
+      top: 5px
+      left: 0
+  .art_intro
+    margin: 5px 0
+    padding: 10px
+    line-height: 23px
+  .art_footer
+    border-top: 1px solid $border_col
+    li
+      display: block
+      margin: 0
+      padding: 10px
+      border-right: 1px solid $border_col
+      float: left
+      a
+        display: block
+        &:hover
+          text-decoration: none
+
+// widget`s style
+.widget_block
+  border: 1px solid $border_col
+  margin-bottom: 10px
+  box-shadow: 0 1px 0 rgba(192, 192, 192, 0.2)
+.w_title
+  margin: 0
+.w_content
+  margin: 0
+  padding: 8px
 /*==== media ====*/
 @import "media.sass"
 @import "../app/libs/animate/animate.sass"

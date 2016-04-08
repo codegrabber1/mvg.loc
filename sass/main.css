@@ -1,5 +1,9 @@
 @import url(../app/libs/superfish/dist/css/superfish.css);
 @import url(../app/libs/jq.mmnu/css/jquery.mmenu.all.css);
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0; }
+
 .brdred {
   border: 1px solid red; }
 
@@ -19,29 +23,81 @@ img {
 *:focus {
   outline: none; }
 
-input {
-  border: none;
-  margin: 0;
+input,
+textarea {
+  border: 1px solid red;
+  margin: 10px 0;
   padding: 10px;
-  background-color: #fff; }
+  background-color: #fff;
+  width: 100%; }
 
-section,
-footer {
+section {
   margin: 0;
   padding: 0; }
+
+article {
+  margin: 0 0 20px 0; }
 
 body {
   font-family: sans-serif;
   max-width: 100%;
   min-width: 320px;
   line-height: 1.42857;
+  color: #2f2f2f;
   -webkit-font-smoothing: antialiased; }
 
 main {
+  margin: 0 0 10px 0;
+  padding: 15px 0; }
+  main .art_header,
+  main .w_title {
+    text-transform: uppercase;
+    position: relative;
+    padding: 5px 15px;
+    border-bottom: 1px solid #ffd200; }
+    main .art_header::before,
+    main .w_title::before {
+      content: "";
+      width: 5px;
+      height: 20px;
+      background-color: #0056ba;
+      position: absolute;
+      top: 5px;
+      left: 0; }
+  main .art_intro {
+    margin: 5px 0;
+    padding: 10px;
+    line-height: 23px; }
+  main .art_footer {
+    border-top: 1px solid #ececec; }
+    main .art_footer li {
+      display: block;
+      margin: 0;
+      padding: 10px;
+      border-right: 1px solid #ececec;
+      float: left; }
+      main .art_footer li a {
+        display: block; }
+        main .art_footer li a:hover {
+          text-decoration: none; }
+
+.widget_block {
+  border: 1px solid #ececec;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 0 rgba(192, 192, 192, 0.2); }
+
+.w_title {
+  margin: 0; }
+
+.w_content {
   margin: 0;
-  padding: 10; }
+  padding: 8px; }
 
 /*==== media ==== */
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0; }
+
 .brdred {
   border: 1px solid red; }
 
@@ -61,16 +117,20 @@ img {
 *:focus {
   outline: none; }
 
-input {
-  border: none;
-  margin: 0;
+input,
+textarea {
+  border: 1px solid red;
+  margin: 10px 0;
   padding: 10px;
-  background-color: #fff; }
+  background-color: #fff;
+  width: 100%; }
 
-section,
-footer {
+section {
   margin: 0;
   padding: 0; }
+
+article {
+  margin: 0 0 20px 0; }
 
 /*==========  Desktop First Method  ========== */
 /* Large Devices, Wide Screens */

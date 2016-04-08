@@ -1,0 +1,30 @@
+@import "bourbon/bourbon"
+@import "settings.sass"
+
+footer
+  background-color: $footer_color
+  color: $border_col
+  .footer_block
+    margin: 30px 0
+    .f_title
+      text-transform: uppercase
+      position: relative
+      padding: 5px 15px
+      border-bottom: 1px solid $blue_col
+      &::before
+        content: ""
+        width: 5px
+        height: 20px
+        background-color: $yell_col
+        position: absolute
+        top: 5px
+        left: 0
+    .f_content
+      padding: 8px 10px
+      li
+        display: block
+        padding: 5px 0
+        a
+          color: #fff
+          &:hover
+            text-decoration: none

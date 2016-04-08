@@ -9,8 +9,11 @@ $font_col: #2f2f2f
 $title_col: #2e2e2e
 $sub_font: #8a8a8a
 $border_col: #ececec
+$footer_color: #333
 
-
+h1,h2,h3,h4,h5,h6,p
+  margin: 0
+  padding: 0
 .brdred
   border: 1px solid red
 .brdblue
@@ -26,12 +29,18 @@ img
   height: auto
 *:focus
   outline: none
-input
-  border: none
-  margin: 0
+input,
+textarea
+  border: 1px solid red
+  margin: 10px 0
   padding: 10px
   background-color: #fff
-section,
-footer
+  width: 100%
+
+section
   margin: 0
   padding: 0
+article
+  margin: 0 0 20px 0
+
+

@@ -1,3 +1,7 @@
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0; }
+
 .brdred {
   border: 1px solid red; }
 
@@ -17,16 +21,20 @@ img {
 *:focus {
   outline: none; }
 
-input {
-  border: none;
-  margin: 0;
+input,
+textarea {
+  border: 1px solid red;
+  margin: 10px 0;
   padding: 10px;
-  background-color: #fff; }
+  background-color: #fff;
+  width: 100%; }
 
-section,
-footer {
+section {
   margin: 0;
   padding: 0; }
+
+article {
+  margin: 0 0 20px 0; }
 
 header {
   width: 100%;
@@ -43,6 +51,8 @@ nav {
   border-top: 1px solid #0056ba;
   border-bottom: 1px solid #ffd200;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2); }
+  nav .sf-arrows .sf-with-ul::after {
+    border: none; }
   nav .sf-menu {
     display: inline-block;
     margin: 0;
@@ -59,9 +69,10 @@ nav {
     nav > ul a, nav li a {
       text-decoration: none;
       color: #8d8d8d; }
-      nav > ul a:hover, nav li a:hover {
+      nav > ul a:hover, nav > ul a.active, nav li a:hover, nav li a.active {
         text-decoration: none;
-        color: #f03c3c; }
+        color: #0056ba;
+        background-color: #ffd200; }
 
 .toggle-mnu {
   display: block;
@@ -103,7 +114,7 @@ nav {
   display: block; }
 
 .top_block {
-  margin: 0 10px;
+  margin: 10px;
   padding: 0 10px; }
   .top_block .t_block_title {
     border-bottom: 1px solid #0056ba;

@@ -25,6 +25,8 @@ jQuery(document).ready(function($) {
    thiss.toggleClass("on");
    $(".main-mnu").slideToggle();
         return false;
-   });
+   });// end top menu
+
+
 
 });// ready

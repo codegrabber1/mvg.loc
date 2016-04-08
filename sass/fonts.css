@@ -1,3 +1,7 @@
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0; }
+
 .brdred {
   border: 1px solid red; }
 
@@ -17,15 +21,19 @@ img {
 *:focus {
   outline: none; }
 
-input {
-  border: none;
-  margin: 0;
+input,
+textarea {
+  border: 1px solid red;
+  margin: 10px 0;
   padding: 10px;
-  background-color: #fff; }
+  background-color: #fff;
+  width: 100%; }
 
-section,
-footer {
+section {
   margin: 0;
   padding: 0; }
+
+article {
+  margin: 0 0 20px 0; }
 
 /*# sourceMappingURL=fonts.css.map */
