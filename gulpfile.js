@@ -28,7 +28,7 @@ gulp.task('connect', function() {
 
 //sass
 gulp.task('sass', function () {
-    return gulp.src('sass/*.sass')
+    return gulp.src('sass/main.sass')
         .pipe(sass().on('error', sass.logError))
         .pipe(concatCss("style.css"))
         .pipe(autoprefixer({
@@ -42,6 +42,7 @@ gulp.task('sass', function () {
 // script concat
 gulp.task('script', function(){
   return gulp.src([
+	  'app/libs/jquery/jquery.min.js',
     'app/libs/animate/animate-css.js',
     'app/libs/jq.mmnu/js/jquery.mmenu.all.min.js',
     'app/libs/superfish/dist/js/superfish.js'
