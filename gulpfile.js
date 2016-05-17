@@ -45,7 +45,8 @@ gulp.task('script', function(){
 	  'app/libs/jquery/jquery.min.js',
     'app/libs/animate/animate-css.js',
     'app/libs/jq.mmnu/js/jquery.mmenu.all.min.js',
-    'app/libs/superfish/dist/js/superfish.js'
+    'app/libs/superfish/dist/js/superfish.js',
+    'app/bower_components/wow/dist/wow.min.js'
   ])
   .pipe(concat('all.js'))
   .pipe(gulp.dest('app/js/'));
